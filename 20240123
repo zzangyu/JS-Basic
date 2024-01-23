@@ -1,0 +1,17 @@
+■ memo
+・console.dir(object);
+    1. 주어진 JavaScript 객체 속성을 인터랙티브한 목록으로 표시
+    2. object의 자식 객체를 볼 수 있음
+    3. 응용
+        3.1. JavaScript의 Object형태로 확인 후 객체 접근 가능
+
+■ HTML과 JavaScript(feat. 브라우저)
+
+・HTML은 접착제
+・JavaScript를 사용하는 이유
+    1. HTML과 상호작용 하기 위함
+    2. HTML의 Element들을 JavaScript를 통해 변경하고 읽을 수 있음
+・The document Object
+    1. 브라우저를 열었을 때 항상 존재하는 객체
+    2. = HTML을 가리키는 또 다른 말
+
