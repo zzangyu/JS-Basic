@@ -1,0 +1,69 @@
+■ memo
+・querySelector는 element를 CSS 방식으로 검색
+    단 하나의 element를 return 해준다. 여러개 있을 경우에는 첫번째 element만 return
+    ex) <div class="hi"><h1></div>
+        const title = document.querySelector(".hi h1");
+    모든 element를 가져오고 싶은 경우
+    ex) <div class="hi"><h1></div>
+        <div class="hi"><h1></div>
+        <div class="hi"><h1></div>
+        <div class="hi"><h1></div>
+        const title = document.querySelectorAll(".hi h1");
+    css selector와 같은 방식이므로 밑과 같이 검색 가능
+    ex) const title = document.querySelector(".hi h1:first-child");
+
+・js에서 object.style 변경 가능
+・Event
+    Object.dir로 검색 했을 때 on~~하는건 다 event이다.
+    clickEvent
+    ex) const title = document.querySelector(".hi h1");
+        function handleTitleClick() {
+            console.log("title was clicked!");
+        }
+        title.addEventListener("click", handleTitleClick);
+    사용하고 싶은 event는 MDN 검색 -> Web APIs 참고
+    cut, paste같은 움직임을 감지 할 수도 있다.
+・ More Events
+    1. title.addEventListener("click", handleTitleClick);
+    2. title.onclick = handleTitleClick;
+    위와 같은 형태로도 쓸 수 있다.
+    하지만 1번과 같은 형태로 써야 .removeEventListner를 쓸 수 있다.
+
+    window event 응용
+        function handleWindowResize() {
+            document.body.style.backgroundColor = "tomato";
+        }
+        
+        window.addEventListener("resize", handleWindowResize);
+    
+    Clipboard Events
+    유저가 copy 행위를 했을 때 발생한다.
+        function handleWindowCopy() {
+            alert("copier!");
+        }
+        
+        window.addEventListener("copy", handleWindowCopy);
+
+    online, offline
+        window.addEventListener("online", methodName);
+        window.addEventListener("offline", methodName);
+・className 변경하기
+    1. element.className = "xx"; 같이 직접적으로 변경하기
+    2. element.classList.contains("xx") -> add or remove
+    2번과 같은 방식으로 하는 것이 좋다.
+    2번과 같은 기능 = toggle
+・preventDefault()
+    정의된 이벤트를 작동하지 못하게 하는 메소드
+・string과 변수를 합치는 방법
+    `(백틱)을 사용한다.
+    "Hello ${var}" 안에서 사용된다.
+・
+・
+・
+・
+・
+・
+・
+・
+・
+・
