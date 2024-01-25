@@ -1,0 +1,29 @@
+■ memo
+    ・username을 기억하는 방법
+        1. 브라우저의 기능을 활용하자.
+        2. API: localStorage
+        3. 저장하기 : localStorage.setItem(key, value);
+        4. 불러오기 : localStorage.getItem(key);
+        5. 삭제하기 : localStorage.removeItem(key);
+    ・interval : 매번 일어나야 하는 무언가
+        setInterval(sayHello, 5000);
+        5초마다 sayHello 메소드를 실행한다.
+    ・Date object
+        1. new Date() : 지금 시간을 리턴
+        2. getXXXX로 원하는 값을 가져오면 된다. (XXXX는 날짜, 시간, 월 등등)
+    ・빈칸 채우는 기능
+        1. string.padStart(length, 0(빈 앞 공간에 들어갈 값))
+        2. string.padEnd(length, 0(빈 뒷 공간에 들어갈 값))
+    ・Math object
+        1. Math.random()
+            0에서 1까지 숫자 중 하나를 랜덤으로 리턴함
+        2. Math.round()
+            반올림
+        3. Math.ceil()
+            올림
+        4. Math.floor()
+            내림
+    ・JSON.stringify()
+        웹 서버로 데이터를 보낼 때 데이터는 문자열이여야 하며, JSON.stringify()를 사용해서 Javascript 객체를 문자열로 변환 할 수 있다.
+    ・JSON.parse()
+        웹 서버로 데이터를 보낼 때 데이터는 문자열이여야 하며, JSON.parse()로 데이터를 구문 분석하며, 데이터가 Javascript 객체로 변환된다.
