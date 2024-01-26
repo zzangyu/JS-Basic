@@ -1,0 +1,19 @@
+■ memo
+    ・JSON.stringify()
+        Stringのタイプで保存したいときに使う
+    ・JSON.parse()
+        JSON文字列を分析、その結果をJSの値や客体を生成する。
+    ・foreach
+        parsedToDos.forEach(paintToDo);
+        上記みたいに、paintToDoを実行するときに必要なパラメータを指定しなくても
+        forEach内部でpaintToDoにパラメータを渡している。
+    ・filter
+        新しい配列を作る
+        forEachとの違い:filterはreturnが必要
+        ruturnがfalseの場合、配列に追加されない
+        1.  aa.filter(aaaa);
+        2.  aa.filter(item => item >= 100);
+        上記通り、arrowで表現可能
+    ・navigator.geolocation.getCurrentPosition(A, B);
+        現在位置情報が取得できる。
+        AはSuccessの時,BはErrorの時実行される
