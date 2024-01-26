@@ -17,3 +17,9 @@
     ・navigator.geolocation.getCurrentPosition(A, B);
         現在位置情報が取得できる。
         AはSuccessの時,BはErrorの時実行される
+    ・API
+        fetch(url)
+        urlは OPEN APIを活用して使える。
+        今回使った OPEN API: https://openweathermap.org
+    
+    ➡ APIの機能全部は使ってないから、今後試してみる必要がある!
