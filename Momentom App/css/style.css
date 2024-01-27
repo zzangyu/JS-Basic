@@ -45,6 +45,7 @@ h2 {
     display: flex;
     justify-content: space-between;
     background-color: rgba(255, 255, 255, 0.274);
+    color: white;
 }
 #header-title {
     padding: 10px 10px 10px 40px;
@@ -77,9 +78,9 @@ h2 {
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: 3px solid black;
+    border-bottom: 1px solid white;
     background-color: rgba(255, 255, 255, 0);
-    color: black;
+    color: white;
     text-align: center;
 }
 #login-form input:last-child {
@@ -90,12 +91,13 @@ h2 {
     cursor: pointer;
     background-color: rgba(255, 255, 255, 0);
     transition: font-size 0.5s;
+    color: white;
 }
 #login-form input:last-child:hover, #greeting-box div:last-child:hover {
     font-size: 17px;
 }
 #login-form input::placeholder {
-    color: black;
+    color: white;
 }
 
 /* BODY */
@@ -132,16 +134,16 @@ h2 {
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: 3px solid rgb(0, 0, 0);
+    border-bottom: 1px solid white;
     background-color: rgba(255, 255, 255, 0);
-    color: black;
+    color: white;
     text-align: center;
 }
 #todo-form input::placeholder {
-    color: black;
+    color: white;
 }
 #todo-list {
-    height: 250px;
+    height: 240px;
     color: white;
 }
 #todo-list button {
@@ -156,7 +158,12 @@ h2 {
 #todo-list li {
     list-style-type: none;
 }
-
+#weather {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 100px;
+}
 
 
 /* Responsive Web */

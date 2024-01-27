@@ -33,6 +33,12 @@ function paintToDo(newTodo) {
 
 function handleToDoSubmit(event) {
     event.preventDefault();
+    const toDoListChildren = document.querySelectorAll("#todo-list li");
+    if(toDoListChildren.length > 10) {
+        alert("10個以上は登録できません。");
+        toDoInput.value = "";
+        return;
+    }
     const newTodo = toDoInput.value;
     // 変数に値を入れたから初期化する。
     toDoInput.value = "";
