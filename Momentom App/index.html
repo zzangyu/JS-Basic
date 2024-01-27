@@ -7,23 +7,33 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <form id="login-form" class="hidden">
-        <input type="text" placeholder="What is your name?" required maxlength="15"/>
-        <button>Log In</button> 
-    </form>
-    <h2 id="clock">00:00</h2>
-    <h1 id="greeting" class="hidden"></h1>
-    <form id="todo-form">
-        <input type="text" name="Write a To Do and Press Enter" required>
-    </form>
-    <ul id="todo-list"></ul>
-    <div id="quote">
-        <span></span>
-        <span></span>
+    <div id="header">
+        <div id="header-title"><span>To Do List</span></div>
+        <form id="login-form" class="hidden">
+            <input type="text" placeholder="ログイン" required maxlength="10"/>
+            <input type="submit" value="Log In">
+        </form>
+        <div id="greeting-box" class="hidden">
+            <div id="greeting" ></div>
+            <div id="logout">Log Out</div>
+        </div>
     </div>
-    <div id="weather">
-        <span></span>
-        <span></span>
+    <div id="main-box">
+        <div id="clock">00:00</div>
+        <div id="todo-form-box">
+            <form id="todo-form">
+                <input type="text" placeholder="入力欄" required>
+            </form>
+            <ul id="todo-list"></ul>
+            <div id="quote">
+                <div></div>
+                <div></div>
+            </div>
+            <div id="weather">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </div>
     <script src="./js/clock.js"></script>
     <script src="./js/greetings.js"></script>

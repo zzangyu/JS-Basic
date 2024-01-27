@@ -23,11 +23,11 @@ function paintToDo(newTodo) {
     const span = document.createElement("span");
     span.innerText = newTodo.text;
     const button = document.createElement("button");
-    button.innerText = "X";
+    button.innerText = "✘";
     // 今後ユーザーがdelete buttonをクリックしたら実行されるElementのEventを登録する。
     button.addEventListener("click", deleteBtn);
-    li.appendChild(span);
     li.appendChild(button);
+    li.appendChild(span);
     toDoList.appendChild(li);
 }
 

@@ -1,9 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width:100%;
+    padding: 0;
+    margin: 0;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+h2 {
+    margin: 0;
+}
+
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 #bgImg {
-    position:absolute;
+    position:fixed;
     width:100vw;
     height:100vh;
     left: 0px;
@@ -11,9 +30,144 @@
     right:0px;
     bottom:0px;
     z-index: -1;
-    opacity:60%;
+    backface-visibility: hidden;
+    opacity:100%;
+    image-rendering: -moz-crisp-edges; /* firefox */
+    image-rendering: -o-crisp-edges; /* opera */
+    image-rendering: -webkit-optimize-contrast; /* chrome */
+    image-rendering: crisp-edges;
 }
 
-#clock, #greeting, #quote {
+/* HEADER */
+#header {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.274);
+}
+#header-title {
+    padding: 10px 10px 10px 40px;
+    font-weight: bolder;
+}
+#greeting-box {
+    display: flex;
+    padding: 10px 40px 10px 10px;
+}
+#greeting-box div:last-child {
+    width: 75px;
+    height: 17px;
+    border: none;
+    font-size: 15px;
+    font-weight: bolder;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0);
+    transition: font-size 0.5s;
+}
+#greeting {
+    padding-right: 10px;
+    font-size: 15px;
+    font-weight: bolder;
+}
+#login-form {
+    padding: 10px 40px 10px 10px;
+}
+#login-form input:first-child {
+    width: 110px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid black;
+    background-color: rgba(255, 255, 255, 0);
+    color: black;
+    text-align: center;
+}
+#login-form input:last-child {
+    width: 60px;
+    border: none;
+    font-size: 15px;
+    font-weight: bolder;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0);
+    transition: font-size 0.5s;
+}
+#login-form input:last-child:hover, #greeting-box div:last-child:hover {
+    font-size: 17px;
+}
+#login-form input::placeholder {
+    color: black;
+}
+
+/* BODY */
+#main-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#clock {
+    width: 100%;
+    height: 230px;
+    margin-top: 130px;
+    font-size: 150px;
     color: white;
+    text-align: center;
+}
+#quote {
+    padding-top: 170px;
+}
+
+#quote div, #weather {
+    text-align: center;
+    color: white;
+}
+#todo-form-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#todo-form input {
+    width: 200px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0);
+    color: black;
+    text-align: center;
+}
+#todo-form input::placeholder {
+    color: black;
+}
+#todo-list {
+    height: 250px;
+    color: white;
+}
+#todo-list button {
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    border: none;
+    padding-right: 5px;
+}
+#todo-list button:hover {
+    cursor: pointer;
+}
+#todo-list li {
+    list-style-type: none;
+}
+
+
+
+/* Responsive Web */
+@media screen and (max-width:500px) {
+    #clock {
+        font-size: 80px;
+    }
+}
+
+@media screen and (min-width:500px) and (max-width:700px) {
+    #clock {
+        font-size: 120px;
+    }
 }
